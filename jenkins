@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('Checkout){steps{Checkout scm}}
+        stage('Checkout){steps{'Checkout scm'}}
         stage('Install Dependencies'){steps{sh 'npm ci'}}
         stage('Install Playwright'){steps{sh 'npx Playwright install'}}
         stage('Run Tests'){steps{sh 'npx playwright test'}}
